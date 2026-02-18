@@ -1,0 +1,36 @@
+{
+  "version": "48.0.0",
+  "files": {
+    "24c467c483b364979aa65f8edd00fa3fad455bebed229e69b039cd39f34906f9": {
+      "displayName": "teststackexampletwoembeddingstackDC6E2243 Template",
+      "source": {
+        "path": "teststackexampletwoembeddingstackDC6E2243.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-current_region-06ea3708": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "24c467c483b364979aa65f8edd00fa3fad455bebed229e69b039cd39f34906f9.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  },
+  "dockerImages": {
+    "exampletwo-embedding-lambda-ddc76d54bdadfee666136ddd9dec73966f99cbc0158ab3ed196d2a3682f93c9a": {
+      "displayName": "exampletwo-embedding-lambda",
+      "source": {
+        "directory": "asset.ddc76d54bdadfee666136ddd9dec73966f99cbc0158ab3ed196d2a3682f93c9a",
+        "dockerFile": "unit/v1/embedding_stack/Dockerfile",
+        "platform": "linux/amd64"
+      },
+      "destinations": {
+        "current_account-current_region-7df4fa9f": {
+          "repositoryName": "cdk-hnb659fds-container-assets-${AWS::AccountId}-${AWS::Region}",
+          "imageTag": "ddc76d54bdadfee666136ddd9dec73966f99cbc0158ab3ed196d2a3682f93c9a",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-image-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  }
+}

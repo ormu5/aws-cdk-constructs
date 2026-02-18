@@ -1,0 +1,1 @@
+{"errorMessage": "string indices must be integers, not 'str'", "errorType": "TypeError", "requestId": "430380a2-004c-41de-8d9e-177b3b36cb30", "stackTrace": ["  File \"/var/task/handler.py\", line 62, in handler\n    \"embeddings\": embed_sentences(event[\"sentences\"], tokenizer=get_tokenizer(), model=get_model()).tolist()\n"]}

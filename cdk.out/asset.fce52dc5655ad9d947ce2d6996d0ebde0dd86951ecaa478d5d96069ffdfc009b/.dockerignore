@@ -1,0 +1,9 @@
+.git
+.gitignore
+**/__pycache__/
+**/*.pyc
+.env
+node_modules
+dist
+build
+cdk.out

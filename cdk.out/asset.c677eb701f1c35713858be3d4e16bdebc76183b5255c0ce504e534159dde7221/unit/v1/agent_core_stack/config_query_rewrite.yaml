@@ -1,0 +1,34 @@
+# Roll into something standard (data contract?)
+
+version: 1
+kind: llm_step
+
+description: >
+  Rewrite a user question into a concise vector-search-optimized query.
+
+model:
+  provider: bedrock
+  id: us.amazon.nova-micro-v1:0
+
+parameters:
+  temperature: 0.1
+  max_tokens: 64
+
+prompts:
+  system: |
+    Rewrite the user question into a short, precise search query.
+    Use domain-specific terminology.
+    Do not answer the question.
+    Do not add new facts.
+    Return only the rewritten query.
+
+input:
+  question:
+    type: string
+output:
+  rewritten_query:
+    type: string
+
+constraints:
+  - no_new_information
+  - no_answering
