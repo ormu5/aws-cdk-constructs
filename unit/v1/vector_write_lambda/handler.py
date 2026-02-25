@@ -31,7 +31,7 @@ def build_record_id(record: dict) -> str:
 
 def build_embedding_sentence(record: dict) -> str:
     """Construct embedding sentence for given payload."""
-    return 
+    return
 
 def handler(event, _context):
     """Intended for structured paylaods. Based on config:

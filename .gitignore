@@ -1,0 +1,16 @@
+*.swp
+__pycache__
+.pytest_cache
+.venv
+.vscode
+*.egg-info
+.idea/*
+dev-utils/notebooks/.ipynb_checkpoints
+.coverage
+# CDK asset staging directory
+.cdk.staging
+cdk.out
+
+.python-version
+
+.DS_Store
