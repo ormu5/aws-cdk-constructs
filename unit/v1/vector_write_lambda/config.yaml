@@ -1,0 +1,19 @@
+id:
+  fields:
+    - path: $.id
+  delim: "-"  # When multiple fields
+
+metadata:
+  fields:
+    - path: $.sales_date
+    - path: $.product_category
+
+embedding:  # Single sentence for now
+  sentence: "Sale event. Date: {{ date }}. Product category: {{ category }}. Sales amount: {{ amount }} USD."
+  bindings:
+    date:
+      path: $.sales_date
+    category:
+      path: $.product_category
+    amount:
+      path: $.sales_amount
